@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  font-family: Shabnam;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* body, container {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)) !important;
+} */
+
+@font-face {
+  font-family: Shabnam;
+  src: url('/fonts/Shabnam.eot');
+  src: url('/fonts/Shabnam.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/Shabnam.woff2') format('woff2'),
+       url('/fonts/Shabnam.woff') format('woff'),
+       url('/fonts/Shabnam.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Shabnam;
+  src: url('/fonts/Shabnam-Bold.eot');
+  src: url('/fonts/Shabnam-Bold.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/Shabnam-Bold.woff2') format('woff2'),
+       url('/fonts/Shabnam-Bold.woff') format('woff'),
+       url('/fonts/Shabnam-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Shabnam;
+  src: url('/fonts/Shabnam-Thin.eot');
+  src: url('/fonts/Shabnam-Thin.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/Shabnam-Thin.woff2') format('woff2'),
+       url('/fonts/Shabnam-Thin.woff') format('woff'),
+       url('/fonts/Shabnam-Thin.ttf') format('truetype');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: Shabnam;
+  src: url('/fonts/Shabnam-Light.eot');
+  src: url('/fonts/Shabnam-Light.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/Shabnam-Light.woff2') format('woff2'),
+       url('/fonts/Shabnam-Light.woff') format('woff'),
+       url('/fonts/Shabnam-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Shabnam;
+  src: url('/fonts/Shabnam-Medium.eot');
+  src: url('/fonts/Shabnam-Medium.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/Shabnam-Medium.woff2') format('woff2'),
+       url('/fonts/Shabnam-Medium.woff') format('woff'),
+       url('/fonts/Shabnam-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.wheel.keen-slider {
+  display: block;
+  color: #fff;
+  height: 100%;
+  overflow: visible;
+  width: 100%;
+}
+.wheel--perspective-right .wheel__inner {
+  perspective-origin: calc(50% + 100px) 50%;
+  transform: translateX(10px);
+  -webkit-transform: translateX(10px);
+}
+.wheel--perspective-left .wheel__inner {
+  perspective-origin: calc(50% - 100px) 50%;
+  transform: translateX(-10px);
+  -webkit-transform: translateX(-10px);
+}
+
+.wheel__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  height: 16%;
+  width: 100%;
+}
+
+.wheel__slides {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.wheel__shadow-top,
+.wheel__shadow-bottom {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  left: 0;
+  height: calc(42% + 2px);
+  width: 100%;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  margin-top: -2px;
+  z-index: 5;
+}
+
+.wheel__shadow-bottom {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  margin-top: 2px;
+  border-bottom: none;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.wheel__label {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1;
+  margin-top: 1px;
+  margin-left: 5px;
+}
+
+.wheel__slide {
+  align-items: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  justify-content: flex-end;
+}
+
+
+/* 
+.swiper-slide{
+  width: 500px !important;
+ } */
