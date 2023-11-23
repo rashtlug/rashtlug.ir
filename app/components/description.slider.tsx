@@ -96,11 +96,11 @@ export default function DescriptionSlider() {
   )
 
   return (
-    <>
+    <div>
       <div className=' relative  flex justify-center items-center '>
-        <div id='circle' className='absolute w-[700px] h-[500px] top-6 bg-green-600/30 rounded-br-[120px] blur-[160px] '></div>
+        <div id='circle' className='absolute lg:w-[700px] lg:h-[500px] w-72 h-72 top-6 bg-green-600/30 rounded-br-[120px] blur-[160px] '></div>
       </div>
-      <div ref={sliderRef} className="keen-slider w-[35rem] h-[25rem] mx-auto rounded-3xl">
+      <div ref={sliderRef} className="keen-slider lg:w-[35rem] lg:h-[25rem] w-80 max-w-11/12  mx-auto rounded-3xl">
         <div className="keen-slider__slide number-slide1 bg-black/60 text-green-500 ">Linux</div>
         <div className="keen-slider__slide number-slide2 bg-black/60 text-green-500">Devops</div>
         <div className="keen-slider__slide number-slide3 bg-black/60 text-green-500">Security</div>
@@ -109,7 +109,7 @@ export default function DescriptionSlider() {
         <div className="keen-slider__slide number-slide6 bg-black/60 text-green-500">Network</div>
       </div>
 
-      <div ref={thumbnailRef} className="keen-slider thumbnail w-[35rem] mx-auto rounded-3xl">
+      <div ref={thumbnailRef} className="keen-slider thumbnail lg:w-[35rem] w-80 max-w-11/12 mx-auto rounded-3xl">
         <div className="keen-slider__slide number-slide1 bg-black/60 text-green-500">Linux</div>
         <div className="keen-slider__slide number-slide2 bg-black/60 text-green-500">Devops</div>
         <div className="keen-slider__slide number-slide3 bg-black/60 text-green-500">Security</div>
@@ -117,6 +117,6 @@ export default function DescriptionSlider() {
         <div className="keen-slider__slide number-slide5 bg-black/60 text-green-500">OSS</div>
         <div className="keen-slider__slide number-slide6 bg-black/60 text-green-500">Network</div>
       </div>
-    </>
+    </div>
   )
 }

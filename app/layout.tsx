@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fa" dir='rtl' className='bg-black'>
-      <body className='dark bg-black'>
+      <body className='dark bg-black overflow-x-hidden'>
         <Header/>
         <div className='container mx-auto'>
           <NextUIProvider>

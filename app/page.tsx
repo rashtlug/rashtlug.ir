@@ -8,20 +8,20 @@ import Footer from './components/footer'
 export default function Home() {
   return (
     <>
-      <main className="flex flex-col w-full max-w-full min-h-screen items-center justify-center p-2 leading-relaxed text-gray-300">
+      <main className="flex flex-col w-full max-w-full min-h-screen items-center justify-center leading-relaxed text-gray-300">
           <div className=' relative z-10 flex justify-center items-center'>
-            <div id='circle' className='absolute w-[700px] h-[500px] bg-green-600/30 rounded-br-[120px] blur-[160px] top-12 left-20'></div>
+            <div id='circle' className='absolute w-[700px] h-[500px] bg-green-600/30 rounded-br-[120px] blur-[160px] top-12 lg:left-20 left-10'></div>
             {/* <div id='circle' className='absolute w-[500px] h-[300px] bg-green-500/30 rounded-br-[120px] blur-[160px] top-12 right-0'></div> */}
           </div>
-          <div className='w-full lg:min-h-unit-2xl min-h- lg:mt-44 flex flex-col lg:flex-row justify-evenly items-center z-10'>
+          <div className='w-full lg:min-h-unit-2xl lg;mt-44 mt-32 flex flex-col lg:flex-row justify-evenly items-center z-10'>
             <div className='lg:text-start flex flex-col  justify-center items-center '>
-              <div>
+              <div className='lg:text-start text-center'>
                 <h1 className='lg:text-8xl text-6xl leading-relaxed font-extrabold text-green-500 p-2 drop-shadow-2xl '>رشت‌لاگ</h1>
-                <p className='lg:w-[46ch] w-[35ch] lg:text-2xl mt-4 text-gray-300'>رشت لاگ به عنوان لاگ <span className='text-green-400'>فعال رشت</span> شروع به کار کردرشت لاگ  کردرشت لاگ به عنوان لاگ فعال رشت شروع به کار کرد</p>
+                <p className='lg:w-[46ch] w-[35ch] lg:text-2xl lg:mt-4 text-gray-300'>رشت لاگ به عنوان لاگ <span className='text-green-400'>فعال رشت</span> شروع به کار کردرشت لاگ  کردرشت لاگ به عنوان لاگ فعال رشت شروع به کار کرد</p>
                 {/* <Image src={'/icons/fire.png'} width={130} height={130} quality={100} alt='fire' /> */}
-                <div className='flex justify-start items-center gap-x-3'>
-                  <Button className='mt-5 bg-green-500' size='lg' color="primary" >ثبت‌نام در رویداد</Button>
-                  <Button className='mt-5' size='lg' variant="light">درباره‌ما</Button>
+                <div className='flex flex-col md:flex-row  justify-start items-center gap-x-3'>
+                  <Button className='mt-5 bg-green-500 w-full md:w-fit' size='lg' color="primary" >ثبت‌نام در رویداد</Button>
+                  <Button className='mt-5 w-full md:w-fit' size='lg' variant="light">درباره‌ما</Button>
                 </div>
               </div>
             </div>
@@ -38,7 +38,7 @@ export default function Home() {
 
 
           {/* <Divider className='mt-20'/> */}
-          <div className='w-full mt-28'>
+          <div className='w-full flex justify-center items-center mt-28'>
             <Description/>
           </div>
       </main>
