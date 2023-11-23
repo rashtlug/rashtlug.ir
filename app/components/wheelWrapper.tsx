@@ -10,11 +10,6 @@ export default function WheelWrapper() {
   function formateDate(_relative: number, absolute: number) {
     return format(subDays(new Date(), absolute), "iii d LLLL")
   }
-
-  useEffect(() => {
-    console.log(format(subDays(new Date(), 20), "iii d LLL"));
-    
-  }, [])
   return (
     <div
       className='md:h-96 flex justify-center items-center'
@@ -22,17 +17,18 @@ export default function WheelWrapper() {
       <div className="md:w-96 md:h-96 h-44">
         <Wheel
           loop
-          length={24}
+          length={90}
           width={140}
           perspective="right"
           setValue={formateDate}
+          targetIdx={70}
         />
       </div>
       <div className="w-8 md:h-96 h-44">
-        <Wheel loop length={24} width={23} />
+        <Wheel loop length={24} width={23} targetIdx={16} />
       </div>
       <div className="w-24 md:h-96 h-44" >
-        <Wheel loop length={60} width={23} perspective="left" />
+        <Wheel loop length={60} width={23} perspective="left" targetIdx={30} />
       </div>
     </div>
   )

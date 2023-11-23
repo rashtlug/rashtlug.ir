@@ -3,6 +3,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import './description.slider.css'
 import 'swiper/css';
 import 'swiper/css/effect-cards'
 import {NextUIProvider} from '@/app/client/next'
