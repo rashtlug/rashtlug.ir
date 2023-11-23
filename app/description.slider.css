@@ -18,7 +18,7 @@ body {
     max-height: 100vh;
     /* max-width: 20px; */
   }
-  
+/*   
   .number-slide1 {
     background: rgb(64, 175, 255);
     background: linear-gradient(
@@ -76,7 +76,7 @@ body {
       rgba(64, 76, 255, 1) 0%,
       rgba(174, 63, 255, 1) 100%
     );
-  }
+  } */
   
   .thumbnail .keen-slider__slide {
     font-size: 30px;

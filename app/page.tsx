@@ -8,7 +8,7 @@ import Footer from './components/footer'
 export default function Home() {
   return (
     <>
-      <main className="flex flex-col w-full min-h-screen items-center justify-center p-2 leading-relaxed text-gray-300">
+      <main className="flex flex-col w-full max-w-full min-h-screen items-center justify-center p-2 leading-relaxed text-gray-300">
           <div className=' relative z-10 flex justify-center items-center'>
             <div id='circle' className='absolute w-[700px] h-[500px] bg-green-600/30 rounded-br-[120px] blur-[160px] top-12 left-20'></div>
             {/* <div id='circle' className='absolute w-[500px] h-[300px] bg-green-500/30 rounded-br-[120px] blur-[160px] top-12 right-0'></div> */}

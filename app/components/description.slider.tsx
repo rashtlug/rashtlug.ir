@@ -44,7 +44,27 @@ function ThumbnailPlugin(
 export default function DescriptionSlider() {
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     initial: 0,
+    loop: true,
+    renderMode: 'performance',
+    drag: true,
+    mode: 'snap',
+    created(s) {
+      setTimeout(() => {
+        s.next()
+      }, 2000)
+    },
+    updated(s) {
+      setTimeout(() => {
+        s.next()
+      }, 2000)
+    },
+    animationEnded(s) {
+      setTimeout(() => {
+        s.next()
+      }, 2000)
+    },
   })
+  const animation = { duration: 30000, easing: (t: any) => t }
   const [thumbnailRef] = useKeenSlider<HTMLDivElement>(
     {
       initial: 0,
@@ -52,28 +72,50 @@ export default function DescriptionSlider() {
         perView: 4,
         spacing: 10,
       },
+      loop: true,
+      renderMode: 'performance',
+      drag: true,
+      mode: 'snap',
+      created(s) {
+        setTimeout(() => {
+          s.next()
+        }, 2000)
+      },
+      updated(s) {
+        setTimeout(() => {
+          s.next()
+        }, 2000)
+      },
+      animationEnded(s) {
+        setTimeout(() => {
+          s.next()
+        }, 2000)
+      },
     },
     [ThumbnailPlugin(instanceRef)]
   )
 
   return (
     <>
-      <div ref={sliderRef} className="keen-slider w-[35rem] h-[25rem] mx-auto">
-        <div className="keen-slider__slide number-slide1 ">1</div>
-        <div className="keen-slider__slide number-slide2">2</div>
-        <div className="keen-slider__slide number-slide3">3</div>
-        <div className="keen-slider__slide number-slide4">4</div>
-        <div className="keen-slider__slide number-slide5">5</div>
-        <div className="keen-slider__slide number-slide6">6</div>
+      <div className=' relative  flex justify-center items-center '>
+        <div id='circle' className='absolute w-[700px] h-[500px] top-6 bg-green-600/30 rounded-br-[120px] blur-[160px] '></div>
+      </div>
+      <div ref={sliderRef} className="keen-slider w-[35rem] h-[25rem] mx-auto rounded-3xl">
+        <div className="keen-slider__slide number-slide1 bg-black/60 text-green-500 ">Linux</div>
+        <div className="keen-slider__slide number-slide2 bg-black/60 text-green-500">Devops</div>
+        <div className="keen-slider__slide number-slide3 bg-black/60 text-green-500">Security</div>
+        <div className="keen-slider__slide number-slide4 bg-black/60 text-green-500">Docker</div>
+        <div className="keen-slider__slide number-slide5 bg-black/60 text-green-500">OSS</div>
+        <div className="keen-slider__slide number-slide6 bg-black/60 text-green-500">Network</div>
       </div>
 
-      <div ref={thumbnailRef} className="keen-slider thumbnail w-[35rem] mx-auto">
-        <div className="keen-slider__slide number-slide1">1</div>
-        <div className="keen-slider__slide number-slide2">2</div>
-        <div className="keen-slider__slide number-slide3">3</div>
-        <div className="keen-slider__slide number-slide4">4</div>
-        <div className="keen-slider__slide number-slide5">5</div>
-        <div className="keen-slider__slide number-slide6">6</div>
+      <div ref={thumbnailRef} className="keen-slider thumbnail w-[35rem] mx-auto rounded-3xl">
+        <div className="keen-slider__slide number-slide1 bg-black/60 text-green-500">Linux</div>
+        <div className="keen-slider__slide number-slide2 bg-black/60 text-green-500">Devops</div>
+        <div className="keen-slider__slide number-slide3 bg-black/60 text-green-500">Security</div>
+        <div className="keen-slider__slide number-slide4 bg-black/60 text-green-500">Docker</div>
+        <div className="keen-slider__slide number-slide5 bg-black/60 text-green-500">OSS</div>
+        <div className="keen-slider__slide number-slide6 bg-black/60 text-green-500">Network</div>
       </div>
     </>
   )

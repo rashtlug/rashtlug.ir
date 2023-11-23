@@ -22,11 +22,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fa" dir='rtl' className='bg-black'>
-      <body className='dark container mx-auto bg-black'>
+      <body className='dark bg-black'>
         <Header/>
-        <NextUIProvider>
-          {children}
-        </NextUIProvider>
+        <div className='container mx-auto'>
+          <NextUIProvider>
+            {children}
+          </NextUIProvider>
+        </div>
       </body>
     </html>
   )
