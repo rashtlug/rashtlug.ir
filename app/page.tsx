@@ -13,7 +13,7 @@ export default function Home() {
             <div id='circle' className='absolute w-[700px] h-[500px] bg-green-600/30 rounded-br-[120px] blur-[160px] top-12 lg:left-20 left-10'></div>
             {/* <div id='circle' className='absolute w-[500px] h-[300px] bg-green-500/30 rounded-br-[120px] blur-[160px] top-12 right-0'></div> */}
           </div>
-          <div className='w-full lg:min-h-unit-2xl lg;mt-44 mt-32 flex flex-col lg:flex-row justify-evenly items-center z-10'>
+          <div className='w-full lg:min-h-unit-2xl lg:mt-44 mt-32 flex flex-col lg:flex-row justify-evenly items-center z-10'>
             <div className='lg:text-start flex flex-col  justify-center items-center '>
               <div className='lg:text-start text-center'>
                 <h1 className='lg:text-8xl text-6xl leading-relaxed font-extrabold text-green-500 p-2 drop-shadow-2xl '>رشت‌لاگ</h1>
