@@ -4,6 +4,13 @@ import LinuxLogos from './components/linuxLogos'
 import { Divider } from '@nextui-org/react'
 import Description from './components/description'
 import Footer from './components/footer'
+import { Metadata } from 'next'
+
+
+export const metadata: Metadata = {
+  title: "سایت رشت لاگ | انجمن کابران گنو-لینوکس",
+  description: 'گروه کاربران لینوکس رشت، یک انجمن غیرانتفاعی از علاقه‌مندان و کاربران سیستم‌عامل لینوکس و نرم‌افزارهای آزاد و متن‌باز در شهر رشت است'
+}
 
 export default function Home() {
   return (
