@@ -1,4 +1,4 @@
-import { Button } from "@nextui-org/react";
+import { Button, Divider } from "@nextui-org/react";
 
 
 export default function Footer() {
@@ -6,6 +6,7 @@ export default function Footer() {
     return (
       <footer className="mt-12">
         <div className="mx-auto max-w-screen-xl px-4 pb-8 pt-16 sm:px-6 lg:px-8">
+        <Divider className="mb-7"/>
           <div className="mx-auto max-w-md">
             <strong className="block text-center text-xl font-bold text-gray-900 dark:text-white sm:text-3xl">
               برای باخبر شدن از آخرین خبرهای رشت‌لاگ، ایمیلت رو اینجا وارد کن
